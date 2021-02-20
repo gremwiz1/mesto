@@ -1,0 +1,8 @@
+.profile {
+    margin-top: 40px;
+    margin-left: 200px;
+    margin-right: 200px;
+    max-width: 880px;
+    min-height: 120px;
+    display: flex;
+}

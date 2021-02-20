@@ -1,0 +1,6 @@
+.element {
+    display:flex;
+    min-height: 361px;
+    width: 100%;
+    flex-direction: column;
+}

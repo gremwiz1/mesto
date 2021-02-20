@@ -1,0 +1,14 @@
+.add-button {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50px;
+    width: 150px;
+    box-sizing: border-box;
+    border: 2px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0;
+    
+
+}

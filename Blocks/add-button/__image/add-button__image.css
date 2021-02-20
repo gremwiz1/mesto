@@ -1,0 +1,9 @@
+.add-button__image {
+    width: 22px;
+    height: 22px;
+    object-fit: cover;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    margin-left: 64px;
+    margin-right: 64px;
+}

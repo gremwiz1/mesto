@@ -1,0 +1,14 @@
+.profile__button {
+    grid-area: button;
+   
+    
+    box-sizing: border-box;
+    border: 1px solid #ffffff;
+    padding: 0;
+    margin-left: 18px;
+    margin-top: 15px;
+    background-color: #000000;
+    height: 24px;
+    
+    
+}

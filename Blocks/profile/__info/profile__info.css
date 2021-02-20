@@ -1,0 +1,11 @@
+.profile__info {
+    display: grid;
+    margin:auto 0;
+    max-width: 336px;
+    min-height: 73px;
+    grid-template-columns: 1fr 42px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "title button"
+    "profession ."
+}
