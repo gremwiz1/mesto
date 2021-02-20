@@ -9,3 +9,16 @@
     "title button"
     "profession ."
 }
+@media screen and (max-width: 840px) {
+    .profile__info {
+        min-height: 54px;
+        margin-top: 22.25px;
+        margin-bottom: 36px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 1fr 47px;
+        grid-template-areas: 
+    "title button"
+    "profession profession"
+    }
+}
