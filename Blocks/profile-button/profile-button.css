@@ -1,4 +1,4 @@
-.profile__button {
+.profile-button {
     grid-area: button;
    
     
@@ -13,13 +13,13 @@
     
     
 }
-.profile__button:hover {
+.profile-button:hover {
     opacity: 0.6;
     
     cursor: pointer;
 }
 @media screen and (max-width: 840px) {
-    .profile__button {
+    .profile-button {
         height: 18px;
         margin-left: 10px;
         margin-top: 8px;

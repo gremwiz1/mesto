@@ -3,12 +3,12 @@ let poppup = document.querySelector('.poppup');
 let nameInput = document.querySelector('.poppup-container__name');
 let jobInput = document.querySelector('.poppup-containter__profession');
 let poppup_close = document.querySelector('.poppup-container__button-close');
-let poppup_open = document.querySelector('.profile__button');
+let poppup_open = document.querySelector('.profile-button');
 
 function formSubmitHandler (evt) {
     evt.preventDefault();
     let profile__title = document.querySelector('.profile__title');
-let profile__profession = document.querySelector('.profile__profession');
+    let profile__profession = document.querySelector('.profile__profession');
     profile__title.textContent = nameInput.value;
     profile__profession.textContent = jobInput.value;
     
