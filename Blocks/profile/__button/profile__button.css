@@ -9,8 +9,14 @@
     margin-top: 15px;
     background-color: #000000;
     height: 24px;
+    transition: 0.5;
     
     
+}
+.profile__button:hover {
+    opacity: 0.6;
+    
+    cursor: pointer;
 }
 @media screen and (max-width: 840px) {
     .profile__button {

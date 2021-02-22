@@ -22,3 +22,9 @@
     "profession profession"
     }
 }
+@media screen and (max-width: 320px) {
+    .profile__info {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
