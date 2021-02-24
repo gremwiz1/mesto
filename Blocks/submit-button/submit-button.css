@@ -6,7 +6,16 @@
     margin-left: 36px;
     margin-right: 36px;
     margin-bottom: 37px;
-    transition: 0.6;
+    transition: 0.6s;
+    border: none;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    font-style: normal;
+    font-weight: normal;
+    width: 358px;
 }
 @media screen and (max-width: 500px) {
     .submit-button {
@@ -15,6 +24,9 @@
         margin-left: 22px;
         margin-right: 22px;
         margin-bottom: 25px;
+        font-size: 14px;
+        line-height: 17px;
+        width: 238px;
     }
 }
 .submit-button:hover {

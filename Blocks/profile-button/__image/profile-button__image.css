@@ -1,9 +1,0 @@
-.profile-button__image {
-    object-fit: cover;
-    padding: 7px;
-}
-@media screen and (max-width: 840px) {
-    .profile-button__image {
-        padding: 5.25px;
-    }
-}

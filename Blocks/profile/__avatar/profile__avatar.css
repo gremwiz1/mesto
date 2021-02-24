@@ -1,24 +1,13 @@
 .profile__avatar {
-    min-height: 127.5px;
-    max-width: 168.75px;
-    padding-top: 3.75px;
-    padding-bottom: 3.75px;
-    margin-left: 22.5px;
-    margin-right: 26.25px;
+    min-height: 120px;
+    max-width: 120px;
+    margin-right: 30px;
     object-fit: cover;
     border-radius: 50%;
 }
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1050px) {
     .profile__avatar {
         margin-left: auto;
         margin-right: auto;
-        
-
-    }
-}
-@media screen and (max-width: 320px) {
-    .profile__avatar {
-        margin-left: 59.5px;
-        margin-right: 53.75px;
     }
 }

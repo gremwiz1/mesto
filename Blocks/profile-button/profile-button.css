@@ -1,24 +1,21 @@
 .profile-button {
     grid-area: button;
-   
-    
     box-sizing: border-box;
     border: 1px solid #ffffff;
-    padding: 0;
     margin-left: 18px;
     margin-top: 15px;
-    background-color: #000000;
+    background-color: transparent;
     height: 24px;
-    transition: 0.5;
-    
-    
+    transition: 0.5s;
+    background-image: url(../../images/profile-button.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 .profile-button:hover {
     opacity: 0.6;
-    
     cursor: pointer;
 }
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1050px) {
     .profile-button {
         height: 18px;
         margin-left: 10px;

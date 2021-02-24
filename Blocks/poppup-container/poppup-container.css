@@ -1,5 +1,4 @@
 .poppup-container {
-    
     position: relative;
     max-width: 430px;
     margin: auto;
@@ -9,8 +8,6 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    
-    
 }
 @media screen and (max-width: 500px) {
     .poppup-container {

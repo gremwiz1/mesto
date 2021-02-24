@@ -8,7 +8,8 @@
     padding-top: 34px;
     margin-left: 36px;
     margin-right: 64px;
-
+    margin-top: 0;
+    margin-bottom: 0;
 }
 @media screen and (max-width: 500px) {
     .poppup-container__title {

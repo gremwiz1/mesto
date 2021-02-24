@@ -6,7 +6,7 @@
     min-height: 120px;
     display: flex;
 }
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1050px) {
     .profile {
         margin-left: 19px;
         margin-right: 19px;

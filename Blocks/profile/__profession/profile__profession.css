@@ -13,7 +13,7 @@
     white-space: nowrap;
     overflow: hidden;
 }
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1050px) {
     .profile__profession {
         text-align: center;
         margin-top: 14px;

@@ -9,7 +9,10 @@
     margin-right: 36px;
     margin-top: 54px;
     border: none;
-
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    width: 358px;
+    box-sizing: border-box;
 }
 .poppup-container__name:last-child {
     margin-top: 30px;
@@ -19,6 +22,7 @@
         margin-left: 22px;
         margin-right: 22px;
         margin-top: 75px;
+        width: 238px;
     }
     
 }

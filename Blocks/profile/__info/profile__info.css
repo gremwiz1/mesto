@@ -9,7 +9,7 @@
     "title button"
     "profession .";
 }
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1050px) {
     .profile__info {
         min-height: 54px;
         margin-top: 22.25px;

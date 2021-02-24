@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Место</title>
     <link rel="stylesheet" href="./pages/index.css">
 </head>
+
 <body class="page">
     <header class="header">
         <div class="header__logo"></div>
@@ -15,81 +17,79 @@
             <img class="profile__avatar" src="./images/zhak-iv-kusto.jpg" alt="Жак-Ив Кусто">
             <div class="profile__info">
                 <h1 class="profile__title">Жак-Ив Кусто</h1>
-                <button class="profile-button">
-                    <img class="profile-button__image" src="./images/profile-button.png" alt="Кнопка для редактирования профиля">
-                </button>
+                <button class="profile-button" type="button"></button>
                 <p class="profile__profession">Исследователь океана</p>
 
             </div>
-            <button class="add-button">
-                <img class="add-button__image" src="./images/add-button.png" alt="Изображение кнопки">
-            </button>
+            <button class="add-button" type="button"></button>
         </section>
         <section class="elements">
             <div class="element">
                 <img class="element__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
                 <div class="element__description">
                     <h2 class="element__title">Карачаевск</h2>
-                    <button class="element__like">
+                    <button class="element__like" type="button">
                 </div>
             </div>
             <div class="element">
                 <img class="element__image" src="./images/gora-ehlbrus.jpg" alt="Гора Эльбрус">
                 <div class="element__description">
                     <h2 class="element__title">Гора Эльбрус</h2>
-                    <button class="element__like">
+                    <button class="element__like" type="button">
                 </div>
             </div>
             <div class="element">
                 <img class="element__image" src="./images/dombaj.jpg" alt="Домбай">
                 <div class="element__description">
                     <h2 class="element__title">Домбай</h2>
-                    <button class="element__like">
+                    <button class="element__like" type="button">
                 </div>
             </div>
             <div class="element">
                 <img class="element__image" src="./images/gora-ehlbrus.jpg" alt="Гора Эльбрус">
                 <div class="element__description">
                     <h2 class="element__title">Гора Эльбрус</h2>
-                    <button class="element__like">
+                    <button class="element__like" type="button">
                 </div>
             </div>
             <div class="element">
                 <img class="element__image" src="./images/dombaj.jpg" alt="Домбай">
                 <div class="element__description">
                     <h2 class="element__title">Домбай</h2>
-                    <button class="element__like">
+                    <button class="element__like" type="button">
                 </div>
             </div>
             <div class="element">
                 <img class="element__image" src="./images/karachaevsk.jpg" alt="Карачаево-Черкессия">
                 <div class="element__description">
                     <h2 class="element__title">Карачаево-Черкессия</h2>
-                    <button class="element__like">
+                    <button class="element__like" type="button">
                 </div>
             </div>
 
         </section>
-        <section class="poppup">
-            <form class="poppup-container">
-                <h2 class="poppup-container__title">Редактировать профиль</h2>
-                <input class="poppup-container__name" type="text" name="firstname" placeholder="Жак-Ив Кусто">
-                <div class="poppup-container__line"></div>
-                <input class="poppup-container__name" type="text" name="profession" placeholder="Исследователь океана">
-                <div class="poppup-container__line"></div>
-                <button class="submit-button">
-                    <p class="submit-button__text">Сохранить</p>
-                    
-                </button>
-                <button class="poppup-container__button-close">&#10006;</button>
 
-            </form>
-            
-
-        </section>
 
     </main>
-    <footer class="footer">&COPY; 2021 Зотов Михаил</footer>
-    <script src="./pages/script.js"></script>
+    <footer class="footer">
+        <p class="footer__text">&COPY; 2021 Зотов Михаил</p>
+    </footer>
+    <section class="poppup">
+        <div class="poppup-container">
+            <h2 class="poppup-container__title">Редактировать профиль</h2>
+            <form class="poppup__container" name="popup-container">
+                <input class="poppup-container__name" type="text" name="firstname" placeholder="Жак-Ив Кусто">
+
+                <input class="poppup-container__name" type="text" name="profession" placeholder="Исследователь океана">
+                <button class="submit-button" type="submit">Сохранить</button>
+
+            </form>
+
+            
+            <button class="poppup-container__button-close" type="button"></button>
+        </div>
+    </section>
+    <script src="./scripts/script.js"></script>
 </body>
+
 </html>
