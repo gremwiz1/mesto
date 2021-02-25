@@ -14,7 +14,7 @@
     width: 358px;
     box-sizing: border-box;
 }
-.poppup-container__name:last-child {
+.poppup-container__name:nth-child(2n) {
     margin-top: 30px;
 }
 @media screen and (max-width: 500px) {

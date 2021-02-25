@@ -15,6 +15,7 @@
     background-image: url(../../../images/Close\ Icon.svg);
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: contain;
 }
 .poppup-container__button-close:hover {
 opacity: 0.6;
