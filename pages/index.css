@@ -20,10 +20,10 @@
 @import url(../blocks/footer/__text/footer__text.css);
 @import url(../blocks/poppup/poppup.css);
 @import url(../blocks/poppup-container/poppup-container.css);
-@import url(../blocks/poppup-container/__title/poppup-container__title.css);
+@import url(../blocks/poppup/__title/poppup__title.css);
 @import url(../blocks/poppup-container/__name/poppup-container__name.css);
 @import url(../blocks/poppup/__container/poppup__container.css);
 @import url(../blocks/submit-button/submit-button.css);
-@import url(../blocks/poppup-container/__button-close/poppup-container__button-close.css);
+@import url(../blocks/poppup/__button-close/poppup__button-close.css);
 @import url(../blocks/poppup/_opened/poppup_opened.css);
 

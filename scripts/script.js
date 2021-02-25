@@ -2,7 +2,7 @@ let formElement = document.querySelector('.poppup-container');
 let poppup = document.querySelector('.poppup');
 let nameInput = document.querySelector('input[name="firstname"]');
 let jobInput = document.querySelector('input[name="profession"]');
-let poppupIsClose = document.querySelector('.poppup-container__button-close');
+let poppupIsClose = document.querySelector('.poppup__button-close');
 let poppupIsOpen = document.querySelector('.profile-button');
 let profileTitle = document.querySelector('.profile__title');
 let profileProfession = document.querySelector('.profile__profession');

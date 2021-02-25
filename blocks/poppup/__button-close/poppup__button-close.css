@@ -1,4 +1,4 @@
-.poppup-container__button-close {
+.poppup__button-close {
     position: absolute;
     top: -31px;
     right: -31px;
@@ -17,11 +17,11 @@
     background-position: center center;
     background-size: contain;
 }
-.poppup-container__button-close:hover {
+.poppup__button-close:hover {
 opacity: 0.6;
 }
 @media screen and (max-width: 500px) {
-    .poppup-container__button-close {
+    .poppup__button-close {
         width: 26px;
         height: 26px;
         font-size: 21px;
