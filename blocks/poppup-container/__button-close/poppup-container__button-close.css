@@ -12,7 +12,7 @@
     font-size: 35px;
     color: white;
     transition: 0.6s;
-    background-image: url(../../../images/Close\ Icon.svg);
+    background-image: url(../../../images/Close-icon\ desktop.svg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -27,5 +27,6 @@ opacity: 0.6;
         font-size: 21px;
         right: 0;
         top: -40px;
+        background-image: url(../../../images/Close\ Icon.svg);
     }
 }

@@ -1,4 +1,4 @@
-let formElement = document.querySelector('.poppup__container');
+let formElement = document.querySelector('.poppup-container');
 let poppup = document.querySelector('.poppup');
 let nameInput = document.querySelector('input[name="firstname"]');
 let jobInput = document.querySelector('input[name="profession"]');

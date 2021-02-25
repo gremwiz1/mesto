@@ -10,5 +10,6 @@
         width: 104px;
         min-height: 24.4px;
         margin-left: 27px;
+        background-image: url(../../../images/logo-header-mobile.svg);
     }
 }
