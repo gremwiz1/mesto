@@ -9,7 +9,7 @@
     flex-direction: column;
     box-sizing: border-box;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 560px) {
     .poppup__container {
         max-width: 282px;
     }
