@@ -9,13 +9,11 @@
     cursor: pointer;
     width: 48.28px;
     height: 48.28px;
-    font-size: 35px;
     color: white;
     transition: 0.6s;
     background-image: url(../../../images/Close-icon\ desktop.svg);
     background-repeat: no-repeat;
     background-position: center center;
-    
 }
 .poppup__button-close:hover {
 opacity: 0.6;
