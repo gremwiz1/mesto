@@ -10,10 +10,10 @@
     margin-bottom: 1px;
     border: none;
 }
-.element__like:active {
-    background-image: url(../../../images/like-active.svg);
-}
 .element__like:hover {
     opacity: 0.5;
     cursor: pointer;
+}
+.element__like:active {
+    background-image: url(../../../images/like-active.svg);
 }
