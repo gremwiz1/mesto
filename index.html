@@ -25,6 +25,7 @@
         </section>
         <section class="elements">
             <div class="element">
+                <button class="element__button-delete"></button>
                 <img class="element__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
                 <div class="element__description">
                     <h2 class="element__title">Карачаевск</h2>
@@ -32,6 +33,7 @@
                 </div>
             </div>
             <div class="element">
+                <button class="element__button-delete"></button>
                 <img class="element__image" src="./images/gora-ehlbrus.jpg" alt="Гора Эльбрус">
                 <div class="element__description">
                     <h2 class="element__title">Гора Эльбрус</h2>
@@ -39,6 +41,7 @@
                 </div>
             </div>
             <div class="element">
+                <button class="element__button-delete"></button>
                 <img class="element__image" src="./images/dombaj.jpg" alt="Домбай">
                 <div class="element__description">
                     <h2 class="element__title">Домбай</h2>
@@ -46,6 +49,7 @@
                 </div>
             </div>
             <div class="element">
+                <button class="element__button-delete"></button>
                 <img class="element__image" src="./images/gora-ehlbrus.jpg" alt="Гора Эльбрус">
                 <div class="element__description">
                     <h2 class="element__title">Гора Эльбрус</h2>
@@ -53,6 +57,7 @@
                 </div>
             </div>
             <div class="element">
+                <button class="element__button-delete"></button>
                 <img class="element__image" src="./images/dombaj.jpg" alt="Домбай">
                 <div class="element__description">
                     <h2 class="element__title">Домбай</h2>
@@ -60,6 +65,7 @@
                 </div>
             </div>
             <div class="element">
+                <button class="element__button-delete"></button>
                 <img class="element__image" src="./images/karachaevsk.jpg" alt="Карачаево-Черкессия">
                 <div class="element__description">
                     <h2 class="element__title">Карачаево-Черкессия</h2>
@@ -74,21 +80,50 @@
     <footer class="footer">
         <p class="footer__text">&COPY; 2021 Зотов Михаил</p>
     </footer>
-    <section class="poppup">
-        <div class="poppup__container">
-            <h2 class="poppup__title">Редактировать профиль</h2>
-            <form class="poppup-container" name="popup-container">
-                <input class="poppup-container__name" type="text" name="firstname" placeholder="Жак-Ив Кусто">
-
-                <input class="poppup-container__name" type="text" name="profession" placeholder="Исследователь океана">
-                <button class="submit-button" type="submit">Сохранить</button>
-
-            </form>
-
-
-            <button class="poppup__button-close" type="button"></button>
+    <section class="popups">
+        <div class="poppup">
+            <div class="poppup__container" id="poppupProfile">
+                <h2 class="poppup__title">Редактировать профиль</h2>
+                <form class="poppup-container" name="popup-container">
+                    <input class="poppup-container__name" type="text" name="firstname" placeholder="Жак-Ив Кусто">
+                    <input class="poppup-container__name" type="text" name="profession" placeholder="Исследователь океана">
+                    <button class="submit-button" type="submit">Сохранить</button>
+                </form>
+                <button class="poppup__button-close" type="button"></button>
+            </div>
         </div>
+        <div class="poppup" id="poppupElement">
+            <div class="poppup__container">
+                <h2 class="poppup__title">Новое место</h2>
+                <form class="poppup-container" name="popup-container">
+                    <input class="poppup-container__name" type="text" name="nameimage" placeholder="Название">
+                    <input class="poppup-container__name" type="text" name="path" placeholder="Ссылка на картинку">
+                    <button class="submit-button" type="submit">Сохранить</button>
+                </form>
+                <button class="poppup__button-close" type="button"></button>
+            </div>
+        </div>
+        <div class="poppup" id="imagepopup">
+            <div class="poppup__container-image">
+                <img class="poppup__image" src="" alt="">
+                <p class="poppup__text"></p>
+                <button class="poppup__button-close" type="button"></button>
+            </div>
+        </div>
+
     </section>
+    
+    <template class="template">
+        <div class="element">
+            <button class="element__button-delete"></button>
+            <img class="element__image" src="" alt="">
+            <div class="element__description">
+                <h2 class="element__title"></h2>
+                <button class="element__like" type="button"></button>
+            </div>
+        </div>
+
+    </template>
     <script src="./scripts/script.js"></script>
 </body>
 

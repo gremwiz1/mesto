@@ -12,6 +12,7 @@
 @import url(../blocks/add-button/add-button.css);
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/element/element.css);
+@import url(../blocks/element/__button-delete/element__button-delete.css);
 @import url(../blocks/element/__image/element__image.css);
 @import url(../blocks/element/__description/element__description.css);
 @import url(../blocks/element/__title/element__title.css);
@@ -26,4 +27,8 @@
 @import url(../blocks/submit-button/submit-button.css);
 @import url(../blocks/poppup/__button-close/poppup__button-close.css);
 @import url(../blocks/poppup/_opened/poppup_opened.css);
+@import url(../blocks/poppup/__image/poppup__image.css);
+@import url(../blocks/poppup/__container-image/poppup__container-image.css);
+@import url(../blocks/poppup/__text/poppup__text.css);
+
 

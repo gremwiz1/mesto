@@ -9,5 +9,5 @@
     left: 0;
     right: 0;
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
-    
+    z-index: 3;
 }
