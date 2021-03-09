@@ -81,34 +81,34 @@
         <p class="footer__text">&COPY; 2021 Зотов Михаил</p>
     </footer>
     <section class="popups">
-        <div class="poppup">
-            <div class="poppup__container">
-                <h2 class="poppup__title">Редактировать профиль</h2>
-                <form class="poppup-container" name="popup-container" id="poppupProfile">
-                    <input class="poppup-container__name" type="text" name="firstname" placeholder="Жак-Ив Кусто">
-                    <input class="poppup-container__name" type="text" name="profession"
-                        placeholder="Исследователь океана">
+        <div class="popup popup_edit-profile">
+            <div class="popup__container">
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <form class="popup-container" name="popup-container" id="popupProfile">
+                    <input class="popup-container__name" type="text" name="firstname" placeholder="Имя">
+                    <input class="popup-container__name" type="text" name="profession"
+                        placeholder="Вид деятельности">
                     <button class="submit-button" type="submit">Сохранить</button>
                 </form>
-                <button class="poppup__button-close" type="button"></button>
+                <button class="popup__button-close" id="popupeditprofile" type="button"></button>
             </div>
         </div>
-        <div class="poppup" id="poppupElement">
-            <div class="poppup__container">
-                <h2 class="poppup__title">Новое место</h2>
-                <form class="poppup-container" name="popup-container" id="poppupFormElement">
-                    <input class="poppup-container__name" type="text" name="nameimage" placeholder="Название">
-                    <input class="poppup-container__name" type="text" name="path" placeholder="Ссылка на картинку">
+        <div class="popup popup_add-card">
+            <div class="popup__container">
+                <h2 class="popup__title">Новое место</h2>
+                <form class="popup-container" name="popup-container" id="popupFormElement">
+                    <input class="popup-container__name" type="text" name="nameimage" placeholder="Название">
+                    <input class="popup-container__name" type="text" name="path" placeholder="Ссылка на картинку">
                     <button class="submit-button" type="submit">Сохранить</button>
                 </form>
-                <button class="poppup__button-close" type="button"></button>
+                <button class="popup__button-close" id="popupaddcard" type="button"></button>
             </div>
         </div>
-        <div class="poppup" id="imagepopup">
-            <div class="poppup__container-image">
-                <img class="poppup__image" src=" " alt=" ">
-                <p class="poppup__text"></p>
-                <button class="poppup__button-close" type="button"></button>
+        <div class="popup popup_image">
+            <div class="popup__container-image">
+                <img class="popup__image" src=" " alt=" ">
+                <p class="popup__text"></p>
+                <button class="popup__button-close" id="imagepopup" type="button"></button>
             </div>
         </div>
 
@@ -125,6 +125,7 @@
         </div>
 
     </template>
+    <script src="./scripts/initial-cards.js"></script>
     <script src="./scripts/script.js"></script>
 </body>
 

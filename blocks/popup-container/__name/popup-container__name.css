@@ -1,4 +1,4 @@
-.poppup-container__name {
+.popup-container__name {
     color: #000000;
     font-family: 'Inter',Arial, sans-serif;
     font-size: 14px;
@@ -14,11 +14,11 @@
     width: 358px;
     box-sizing: border-box;
 }
-.poppup-container__name:nth-child(2n) {
+.popup-container__name:nth-child(2n) {
     margin-top: 30px;
 }
 @media screen and (max-width: 560px) {
-    .poppup-container__name {
+    .popup-container__name {
         margin-left: 22px;
         margin-right: 22px;
         margin-top: 75px;

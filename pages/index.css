@@ -20,16 +20,16 @@
 @import url(../blocks/element/__like-active/element__like-active.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__text/footer__text.css);
-@import url(../blocks/poppup/poppup.css);
-@import url(../blocks/poppup-container/poppup-container.css);
-@import url(../blocks/poppup/__title/poppup__title.css);
-@import url(../blocks/poppup-container/__name/poppup-container__name.css);
-@import url(../blocks/poppup/__container/poppup__container.css);
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup-container/popup-container.css);
+@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup-container/__name/popup-container__name.css);
+@import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/submit-button/submit-button.css);
-@import url(../blocks/poppup/__button-close/poppup__button-close.css);
-@import url(../blocks/poppup/_opened/poppup_opened.css);
-@import url(../blocks/poppup/__image/poppup__image.css);
-@import url(../blocks/poppup/__container-image/poppup__container-image.css);
-@import url(../blocks/poppup/__text/poppup__text.css);
+@import url(../blocks/popup/__button-close/popup__button-close.css);
+@import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/popup/__image/popup__image.css);
+@import url(../blocks/popup/__container-image/popup__container-image.css);
+@import url(../blocks/popup/__text/popup__text.css);
 
 
