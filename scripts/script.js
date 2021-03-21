@@ -23,7 +23,7 @@ renderElements();
 formElement.addEventListener('submit', submitEditProfileForm);
 popupFormElement.addEventListener('submit', submitAddCardPopup);
 popupIsOpen.addEventListener('click', () => {openProfileForm(popupProfileForm)});
-addElementButton.addEventListener('click', () => {openPopup(popupAddElement)});
+addElementButton.addEventListener('click', () => {openPopupAddCard()});
 buttonCloseFormAddCard.addEventListener('click', () => {closeFormAddCard()});
 buttonCloseImagePopup.addEventListener('click', () => {closePopup(popupWithImage)});
 buttonCloseEditProfile.addEventListener('click', () => {closePopup(popupProfileForm)});
@@ -113,5 +113,9 @@ function openProfileForm(popup) {
 function closeFormAddCard() {
   popupFormElement.reset();
   closePopup(popupAddElement);
+}
+function openPopupAddCard() {
+    openPopup(popupAddElement);
+    popupFormElement.reset();
 }
 

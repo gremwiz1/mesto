@@ -24,8 +24,4 @@
         margin-top: 75px;
         width: 238px;
     }
-    
-}
-.popup-container__name:invalid {
-    border-bottom: 1px solid #ff0000;
 }
