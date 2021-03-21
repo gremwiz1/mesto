@@ -27,6 +27,34 @@ addElementButton.addEventListener('click', () => {openPopup(popupAddElement)});
 buttonCloseFormAddCard.addEventListener('click', () => {closeFormAddCard()});
 buttonCloseImagePopup.addEventListener('click', () => {closePopup(popupWithImage)});
 buttonCloseEditProfile.addEventListener('click', () => {closePopup(popupProfileForm)});
+document.body.addEventListener('keydown', (evt) => {
+    if(evt.keyCode === 27) {
+        if(popupProfileForm.classList.contains('popup_opened')) {
+            closePopup(popupProfileForm);
+        }
+        if(popupWithImage.classList.contains('popup_opened')) {
+            closePopup(popupWithImage);
+        }
+        if(popupAddElement.classList.contains('popup_opened')) {
+            closePopup(popupAddElement);
+        }
+    }
+});
+popupProfileForm.addEventListener('click', (evt) => {
+    if(!evt.target.closest('.popup__container')) {
+        closePopup(popupProfileForm);
+    }
+});
+popupAddElement.addEventListener('click', (evt) => {
+    if(!evt.target.closest('.popup__container')) {
+        closePopup(popupAddElement);
+    }
+});
+popupWithImage.addEventListener('click', (evt) => {
+    if(!evt.target.closest('.popup__container-image')) {
+        closePopup(popupWithImage);
+    }
+});
 function renderElements() {
 const result = initialCards.map(createCard);
 container.append(...result);
@@ -74,8 +102,7 @@ function submitAddCardPopup(evt) {
     evt.preventDefault();
     const card = createCard({name: inputNameImage.value, link: inputSourceImage.value});
     container.prepend(card);
-    inputNameImage.value ="";
-    inputSourceImage.value ="";
+    popupFormElement.reset();
     closePopup(evt.target.closest('.popup'));
 }
 function openProfileForm(popup) {
@@ -84,8 +111,7 @@ function openProfileForm(popup) {
   jobInput.value = profileProfession.textContent;
 }
 function closeFormAddCard() {
-  inputNameImage.value ="";
-  inputSourceImage.value ="";
+  popupFormElement.reset();
   closePopup(popupAddElement);
 }
 
