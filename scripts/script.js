@@ -27,19 +27,6 @@ addElementButton.addEventListener('click', () => {openPopupAddCard()});
 buttonCloseFormAddCard.addEventListener('click', () => {closeFormAddCard()});
 buttonCloseImagePopup.addEventListener('click', () => {closePopup(popupWithImage)});
 buttonCloseEditProfile.addEventListener('click', () => {closePopup(popupProfileForm)});
-document.body.addEventListener('keydown', (evt) => {
-    if(evt.keyCode === 27) {
-        if(popupProfileForm.classList.contains('popup_opened')) {
-            closePopup(popupProfileForm);
-        }
-        if(popupWithImage.classList.contains('popup_opened')) {
-            closePopup(popupWithImage);
-        }
-        if(popupAddElement.classList.contains('popup_opened')) {
-            closePopup(popupAddElement);
-        }
-    }
-});
 popupProfileForm.addEventListener('click', (evt) => {
     if(!evt.target.closest('.popup__container')) {
         closePopup(popupProfileForm);
@@ -80,10 +67,12 @@ function submitEditProfileForm(evt) {
     closePopup(evt.target.closest('.popup'));
 }
 function closePopup(popup) {
+    document.body.removeEventListener('keydown', closePopupEsc);
     popup.classList.remove('popup_opened');
 }
 function openPopup(popup) {
     popup.classList.add('popup_opened');
+    document.body.addEventListener('keydown', closePopupEsc);
 }
 function changeLikeElement(item) {
 item.classList.toggle('element__like-active');
@@ -117,5 +106,15 @@ function closeFormAddCard() {
 function openPopupAddCard() {
     openPopup(popupAddElement);
     popupFormElement.reset();
+    const submitButtonFormAddCard = popupFormElement.querySelector('.submit-button');
+    submitButtonFormAddCard.setAttribute('disabled', true);
+}
+function closePopupEsc(evt) {
+    const keyCodeEscape = 27;
+    console.log(evt.keyCode);
+    if(evt.keyCode === keyCodeEscape) {
+        const activePopup = document.querySelector('.popup_opened');
+        closePopup(activePopup);
+    }
 }
 
