@@ -111,7 +111,6 @@ function openPopupAddCard() {
 }
 function closePopupEsc(evt) {
     const keyCodeEscape = 27;
-    console.log(evt.keyCode);
     if(evt.keyCode === keyCodeEscape) {
         const activePopup = document.querySelector('.popup_opened');
         closePopup(activePopup);
