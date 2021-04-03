@@ -85,11 +85,12 @@
             <div class="popup__container">
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <form class="popup-container" name="popup-container" id="popupProfile" novalidate>
-                    <input class="popup-container__name" id="name-input" type="text" name="firstname" placeholder="Имя" minlength="2" maxlength="40" required>
+                    <input class="popup-container__name" id="name-input" type="text" name="firstname" placeholder="Имя"
+                        minlength="2" maxlength="40" required>
                     <span class="popup-container__error" id="name-input-error"></span>
                     <input class="popup-container__name" id="profession-input" type="text" name="profession"
                         placeholder="Вид деятельности" minlength="2" maxlength="200" required>
-                    <span class="popup-container__error" id="profession-input-error"></span>    
+                    <span class="popup-container__error" id="profession-input-error"></span>
                     <button class="submit-button" type="submit">Сохранить</button>
                 </form>
                 <button class="popup__button-close" id="popupeditprofile" type="button"></button>
@@ -99,9 +100,11 @@
             <div class="popup__container">
                 <h2 class="popup__title">Новое место</h2>
                 <form class="popup-container" name="popup-container" id="popupFormElement" novalidate>
-                    <input class="popup-container__name" id="name-image-input" type="text" name="nameimage" placeholder="Название" minlength="2" maxlength="30" required>
+                    <input class="popup-container__name" id="name-image-input" type="text" name="nameimage"
+                        placeholder="Название" minlength="2" maxlength="30" required>
                     <span class="popup-container__error" id="name-image-input-error"></span>
-                    <input class="popup-container__name" id="url-image-input" type="url" name="path" placeholder="Ссылка на картинку" required>
+                    <input class="popup-container__name" id="url-image-input" type="url" name="path"
+                        placeholder="Ссылка на картинку" required>
                     <span class="popup-container__error" id="url-image-input-error"></span>
                     <button class="submit-button" type="submit">Создать</button>
                 </form>
@@ -129,9 +132,9 @@
         </div>
 
     </template>
-    <script src="./scripts/initial-cards.js"></script>
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/validate.js"></script>
+
+    <script type="module" src="./scripts/script.js"></script>
+
 </body>
 
 </html>
