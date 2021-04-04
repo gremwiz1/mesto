@@ -1,4 +1,4 @@
-import {openImagePopup} from './script.js';
+import {openImagePopup} from './utils/utils.js';
 export class Card {
     constructor(item, selector) {
         this._name = item.name;
@@ -15,9 +15,7 @@ export class Card {
         elementTitle.textContent = this._name;
         elementImage.src = this._link;
         elementImage.alt = this._name;
-        elementImage.addEventListener('click', () => { openImagePopup(elementImage, elementTitle) });
-        elementLike.addEventListener('click', () => { this._changeLikeElement(elementLike) });
-        elementButtonDelete.addEventListener('click', () => { this._deleteCard(elementButtonDelete) })
+        this._setEventListeners(elementImage,elementTitle,elementLike,elementButtonDelete);
         return newItem;
     }
     _changeLikeElement(item) {
@@ -26,6 +24,11 @@ export class Card {
     _deleteCard(item) {
         const elementDelete = item.closest('.element');
         elementDelete.remove();
+    }
+    _setEventListeners(elementImage,elementTitle,elementLike,elementButtonDelete) {
+        elementImage.addEventListener('click', () => { openImagePopup(elementImage, elementTitle) });
+        elementLike.addEventListener('click', () => { this._changeLikeElement(elementLike) });
+        elementButtonDelete.addEventListener('click', () => { this._deleteCard(elementButtonDelete) });
     }
 
 }
