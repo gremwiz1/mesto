@@ -16,8 +16,6 @@ const popupAddElement = document.querySelector('.popup_add-card');
 const addElementButton = document.querySelector('.add-button');
 const popupWithImage = document.querySelector('.popup_image');
 const selectorTemplateCard = '.template';
-const inputNameImage = document.querySelector('input[name="nameimage"]');
-const inputSourceImage = document.querySelector('input[name="path"]');
 const submitButtonFormAddCard = popupFormElement.querySelector('.submit-button');
 const submitButtonEditProfile = popupProfileForm.querySelector('.submit-button');
 const validationObjectForms = {
@@ -53,7 +51,10 @@ function submitEditProfileForm(evt) {
 }
 function submitAddCardPopup(evt) {
     evt.preventDefault();
-    const card = createCard({name: inputNameImage.value, link: inputSourceImage.value}, selectorTemplateCard, handleCardClick);
+    const cardInfo = popupWithFormAddCard._getInputValues();
+    let inputNameImage = cardInfo.nameimage;
+    let inputSourceImage = cardInfo.path;
+    const card = createCard({name: inputNameImage, link: inputSourceImage}, selectorTemplateCard, handleCardClick);
     const cardElement = card.renderCard();
     defaultCardList.addItem(cardElement);
     popupFormElement.reset();
