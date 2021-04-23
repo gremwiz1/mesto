@@ -1,4 +1,4 @@
-const popupWithImage = document.querySelector('.popup_image');
+/*const popupWithImage = document.querySelector('.popup_image');
 const popupImage = document.querySelector('.popup__image');
 const popupText = document.querySelector('.popup__text');
 const keyCodeEscape = 27;
@@ -21,4 +21,4 @@ export const openImagePopup = (item, text) => {
     function closePopup(popup) {
         document.body.removeEventListener('keydown', closePopupEsc);
         popup.classList.remove('popup_opened');
-    }
+    }*/

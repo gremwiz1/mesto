@@ -1,9 +1,10 @@
-import {openImagePopup} from './utils/utils.js';
+//import {openImagePopup} from './utils/utils.js';
 export class Card {
-    constructor(item, selector) {
+    constructor(item, selector,handleCardClick) {
         this._name = item.name;
         this._link = item.link;
         this._selector = selector;
+        this._handleCardClick = handleCardClick;
     }
     renderCard() {
         const templateElement = document.querySelector(this._selector);
@@ -26,7 +27,7 @@ export class Card {
         elementDelete.remove();
     }
     _setEventListeners(elementImage,elementTitle,elementLike,elementButtonDelete) {
-        elementImage.addEventListener('click', () => { openImagePopup(elementImage, elementTitle) });
+        elementImage.addEventListener('click', () => {this._handleCardClick(elementImage, elementTitle) });
         elementLike.addEventListener('click', () => { this._changeLikeElement(elementLike) });
         elementButtonDelete.addEventListener('click', () => { this._deleteCard(elementButtonDelete) });
     }
