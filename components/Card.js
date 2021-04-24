@@ -1,4 +1,3 @@
-//import {openImagePopup} from './utils/utils.js';
 export class Card {
     constructor(item, selector,handleCardClick) {
         this._name = item.name;
