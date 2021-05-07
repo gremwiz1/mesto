@@ -141,24 +141,24 @@ function handleLikeClick(card, elementLike, elementNumberLikes) {
 
 }
 function handleDeleteIconClick(card, elementCard) {
-
-
+    
+   
     
     popupWithDeleteCard.changeFunctionSubmit(() => {
         
         
 
         api.deleteCard(card)
-            .then((result) => {
+            .then(() => {
                 elementCard.remove();
                 popupWithDeleteCard.close();
             }).catch((err) => {
                 console.log(err);
                 popupWithDeleteCard.close();
             })
-            popupWithDeleteCard.open();
+           
     })
-
+    popupWithDeleteCard.open();
 
 }
 
