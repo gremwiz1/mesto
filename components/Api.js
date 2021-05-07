@@ -129,6 +129,28 @@ export class Api {
       return Promise.reject(`Ошибка: ${res.status}`);
     });
   }
+  changeAvatarImage(item) {
+
+    return fetch(`https://mesto.nomoreparties.co/v1/${this._baseUrl}/users/me/avatar`, {
+      method: 'PATCH',
+      headers: {
+        authorization: this._authorization,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        avatar: item.path
+
+      })
+    })
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        }
+
+        // если ошибка, отклоняем промис
+        return Promise.reject(`Ошибка: ${res.status}`);
+      });
+  }
 
   // другие методы работы с API
 }

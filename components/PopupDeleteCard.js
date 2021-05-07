@@ -4,6 +4,7 @@ export class PopupDeleteCard extends Popup {
         super(popupElement);
 
         this._form = popupElement.querySelector('[name="popup-container"]');
+        this._submitButton = this._form.querySelector('.submit-button');
 
     }
 
@@ -14,8 +15,8 @@ export class PopupDeleteCard extends Popup {
             evt.preventDefault();
             this.changeFunctionSubmit();
         })
-            
-        
+
+
     }
     close() {
         super.close();
@@ -28,5 +29,8 @@ export class PopupDeleteCard extends Popup {
     changeFunctionSubmit(handler) {
         this.changeFunctionSubmit = handler;
 
+    }
+    load(text) {
+        this._submitButton.textContent = text;
     }
 }
