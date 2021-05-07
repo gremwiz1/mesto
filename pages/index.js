@@ -146,6 +146,7 @@ function handleDeleteIconClick(card, elementCard) {
     
     popupWithDeleteCard.changeFunctionSubmit(() => {
         
+        
 
         api.deleteCard(card)
             .then((result) => {
