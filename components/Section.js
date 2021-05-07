@@ -1,13 +1,21 @@
 export class Section {
-    constructor({ items, renderer }, containerSelector) {
-        this._items = items;
+    constructor({api, renderer}, containerSelector) {
+        
         this._renderer = renderer;
         this._container = document.querySelector(containerSelector);
+        this._api = api;
     }
     renderer() {
-        this._items.map(item => {
-            this._renderer(item);
-        });
+        
+        this._api.getInitialCards()
+        .then((result) => {
+            result.map((item) => {
+                this._renderer(item);
+            })
+        }).catch((err) => {
+            console.log(err); // выведем ошибку в консоль
+          });
+        
     }
     addItem(element) {
         this._container.append(element);

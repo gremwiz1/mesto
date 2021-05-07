@@ -7,6 +7,7 @@ import { PopupWithImage } from '../components/PopupWithImage.js';
 import { PopupWithForm } from '../components/PopupWithForm.js';
 import { Section } from '../components/Section.js';
 import { UserInfo } from '../components/UserInfo.js';
+import {Api} from '../components/Api.js';
 const formElement = document.getElementById('popupProfile');
 const popupFormElement = document.getElementById('popupFormElement');
 const popupProfileForm = document.querySelector('.popup_edit-profile');
@@ -96,3 +97,11 @@ const whoIsTheGoat = [
   { name: 'Kobe Bryant', link: bryantImage },
 ];
 <img src="<%=require('./images/logo.png')%>" alt="Логотип"></img>*/
+const api = new Api('cohort-23','71d78780-0adb-4990-8076-8dfa433548e7');
+api.getInitialCards()
+.then((result) => {
+  console.log(result);
+})
+.catch((err) => {
+  console.log(err); // выведем ошибку в консоль
+}); 
