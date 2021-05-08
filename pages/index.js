@@ -1,6 +1,5 @@
 import { Card } from '../components/Card.js';
 import { FormValidator } from '../components/FormValidator.js';
-import { initialCards } from '../scripts/initial-cards.js';
 import { Popup } from '../components/Popup.js';
 import { PopupWithImage } from '../components/PopupWithImage.js';
 import { PopupWithForm } from '../components/PopupWithForm.js';
@@ -22,7 +21,17 @@ const popupChangeAvatar = document.querySelector('.popup_change-avatar');
 const addElementButton = document.querySelector('.add-button');
 const popupWithImage = document.querySelector('.popup_image');
 const selectorTemplateCard = '.template';
-
+const imageAvatar = document.querySelector('.profile__avatar');
+const buttonImageAvatar = document.querySelector('.profile__button-change-avatar');
+const sectionProfile = document.querySelector('.profile__change-avatar');
+sectionProfile.addEventListener('mouseover', () => {
+    buttonImageAvatar.classList.add('profile__button-change-avatar_active');
+    imageAvatar.classList.add('profile__avatar_inactive');
+})
+sectionProfile.addEventListener('mouseout', () => {
+    buttonImageAvatar.classList.remove('profile__button-change-avatar_active');
+    imageAvatar.classList.remove('profile__avatar_inactive');
+})
 const validationObjectForms = {
     inputSelector: '.popup-container__name',
     submitButtonSelector: '.submit-button',

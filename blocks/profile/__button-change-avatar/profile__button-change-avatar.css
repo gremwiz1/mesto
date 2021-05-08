@@ -14,10 +14,3 @@
     transition: 1s;
     z-index: 2;
 }
-.profile__button-change-avatar:hover {
-    opacity: 1;
-    cursor: pointer; 
-}
-.profile__button-change-avatar:hover + .profile__avatar{
-    opacity: 0.8;
-}
