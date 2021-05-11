@@ -76,9 +76,7 @@ function submitEditProfileForm(evt) {
             popupWithFormEditProfile.load('Сохранить');
         })
 }
-function submitAddCardPopup(evt) {
-    evt.preventDefault();
-    const cardInfo = popupWithFormAddCard._getInputValues();
+function submitAddCardPopup(cardinfo) {
     let inputNameImage = cardInfo.nameimage;
     let inputSourceImage = cardInfo.path;
     popupWithFormAddCard.load('Сохранение...');

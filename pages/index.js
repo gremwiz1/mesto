@@ -60,30 +60,25 @@ addElementButton.addEventListener('click', () => {
     popupWithFormAddCard.open();
     validatorAddCardForm.disableSubmitButton();
 });
-function submitEditProfileForm(evt) {
-    evt.preventDefault();
+function submitEditProfileForm(info) {
     popupWithFormEditProfile.load('Сохранение...');
-    api.editUserProfile(popupWithFormEditProfile._getInputValues())
+    api.editUserProfile(info)
         .then((result) => {
             userInfo.setUserInfo(result);
             popupWithFormEditProfile.close();
         })
         .catch((err) => {
             console.log(err);
-            popupWithFormEditProfile.close();
         }).finally(() => {
             popupWithFormEditProfile.load('Сохранить');
         })
 }
-function submitAddCardPopup(evt) {
-    evt.preventDefault();
-    const cardInfo = popupWithFormAddCard._getInputValues();
-    let inputNameImage = cardInfo.nameimage;
-    let inputSourceImage = cardInfo.path;
+function submitAddCardPopup(cardInfo) {
+    const inputNameImage = cardInfo.nameimage;
+    const inputSourceImage = cardInfo.path;
     popupWithFormAddCard.load('Сохранение...');
     api.addItem({ name: inputNameImage, link: inputSourceImage })
         .then((result) => {
-
             const card = createCard(result, selectorTemplateCard, handleCardClick, handleLikeClick, handleDeleteIconClick);
             const cardElement = card.renderCard();
             defaultCardList.addItem(cardElement);
@@ -91,7 +86,6 @@ function submitAddCardPopup(evt) {
 
         }).catch((err) => {
             console.log(err); // выведем ошибку в консоль
-            popupWithFormAddCard.close();
         }).finally(() => {
             popupWithFormAddCard.load('Сохранить');
         })
@@ -118,15 +112,11 @@ popupWithFormEditProfile.setEventListeners();
 popupWithDeleteCard.setEventListeners();
 popupWithChangeAvatar.setEventListeners();
 const cardListSelector = ".elements";
-
 const userInfo = new UserInfo('.profile__title', '.profile__profession', '.profile__avatar');
 const api = new Api('cohort-23', '71d78780-0adb-4990-8076-8dfa433548e7');
-
-
 const defaultCardList = new Section({
     api,
     renderer: (item) => {
-
         const card = createCard(item, selectorTemplateCard, handleCardClick, handleLikeClick, handleDeleteIconClick);
         const cardElement = card.renderCard();
         defaultCardList.addItem(cardElement);
@@ -141,67 +131,49 @@ api.getUserProfile()
         console.log(err);
     })
 function handleLikeClick(card, elementLike, elementNumberLikes) {
-
     if (elementLike.classList.contains('element__like-active')) {
         api.deleteLikeClick(card)
             .then((result) => {
                 elementNumberLikes.textContent = result.likes.length;
                 elementLike.classList.toggle('element__like-active');
-
             }).catch((err) => {
                 console.log(err)
             })
-
     }
     else {
         api.putLikeClick(card)
             .then((result) => {
                 elementNumberLikes.textContent = result.likes.length;
                 elementLike.classList.toggle('element__like-active');
-
             }).catch((err) => {
                 console.log(err)
             })
     }
-
-
 }
 function handleDeleteIconClick(card, elementCard) {
-
-
-
     popupWithDeleteCard.changeFunctionSubmit(() => {
         popupWithDeleteCard.load('Удаление...');
-
-
-
-
         api.deleteCard(card)
             .then(() => {
                 elementCard.remove();
                 popupWithDeleteCard.close();
             }).catch((err) => {
                 console.log(err);
-                popupWithDeleteCard.close();
             }).finally(() => {
                 popupWithDeleteCard.load('Да');
             })
-
     })
     popupWithDeleteCard.open();
-
 }
-function submitChangeAvatar(evt) {
-    evt.preventDefault();
+function submitChangeAvatar(data) {
     popupWithChangeAvatar.load('Сохранение...');
-    api.changeAvatarImage(popupWithChangeAvatar._getInputValues())
+    api.changeAvatarImage(data)
         .then((result) => {
             userInfo.setUserInfo(result);
             popupWithChangeAvatar.close();
         })
         .catch((err) => {
             console.log(err);
-            popupWithChangeAvatar.close();
         }).finally(() => {
             popupWithChangeAvatar.load('Сохранить');
         })
