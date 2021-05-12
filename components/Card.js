@@ -1,10 +1,11 @@
 export class Card {
-    constructor(item, selector, handleCardClick, handleLikeClick, handleDeleteIconClick) {
+    constructor(item, myCodeUser, selector, handleCardClick, handleLikeClick, handleDeleteIconClick) {
         this._name = item.name;
         this._link = item.link;
         this.__numberLikes = (item.likes) ? item.likes.length : 0;
         this._id = item._id;
         this._owner = item.owner._id;
+        this._myCodeUser = myCodeUser;
         this._selector = selector;
         this._handleCardClick = handleCardClick;
         this._handleLikeClick = handleLikeClick;
@@ -23,7 +24,7 @@ export class Card {
         elementImage.alt = this._name;
         elementNumberLikes.textContent = this.__numberLikes;
         this._setEventListeners(elementImage,elementTitle,elementLike,elementButtonDelete,elementNumberLikes);
-        if(this._owner!=='5e51fd63ad71e1d086b3e567') {
+        if(this._owner!==this._myCodeUser) {
             
             elementButtonDelete.style.display = 'none';
         }

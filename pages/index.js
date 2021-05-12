@@ -24,6 +24,7 @@ const selectorTemplateCard = '.template';
 const imageAvatar = document.querySelector('.profile__avatar');
 const buttonImageAvatar = document.querySelector('.profile__button-change-avatar');
 const sectionProfile = document.querySelector('.profile__change-avatar');
+let myCodeUser;
 sectionProfile.addEventListener('mouseover', () => {
     buttonImageAvatar.classList.add('profile__button-change-avatar_active');
     imageAvatar.classList.add('profile__avatar_inactive');
@@ -79,7 +80,7 @@ function submitAddCardPopup(cardInfo) {
     popupWithFormAddCard.load('Сохранение...');
     api.addItem({ name: inputNameImage, link: inputSourceImage })
         .then((result) => {
-            const card = createCard(result, selectorTemplateCard, handleCardClick, handleLikeClick, handleDeleteIconClick);
+            const card = createCard(result, myCodeUser, selectorTemplateCard, handleCardClick, handleLikeClick, handleDeleteIconClick);
             const cardElement = card.renderCard();
             defaultCardList.addItem(cardElement);
             popupWithFormAddCard.close();
@@ -91,8 +92,8 @@ function submitAddCardPopup(cardInfo) {
         })
 
 }
-function createCard(item, selector, handleCardClick, handleLikeClick, handleDeleteIconClick) {
-    return new Card(item, selector, handleCardClick, handleLikeClick, handleDeleteIconClick);
+function createCard(item, myCodeUser, selector, handleCardClick, handleLikeClick, handleDeleteIconClick) {
+    return new Card(item, myCodeUser, selector, handleCardClick, handleLikeClick, handleDeleteIconClick);
 }
 function createFormValidator(valiadationConfig, form) {
     return new FormValidator(valiadationConfig, form);
@@ -115,21 +116,26 @@ const cardListSelector = ".elements";
 const userInfo = new UserInfo('.profile__title', '.profile__profession', '.profile__avatar');
 const api = new Api('cohort-23', '71d78780-0adb-4990-8076-8dfa433548e7');
 const defaultCardList = new Section({
-    api,
+    
     renderer: (item) => {
-        const card = createCard(item, selectorTemplateCard, handleCardClick, handleLikeClick, handleDeleteIconClick);
+        const card = createCard(item, myCodeUser, selectorTemplateCard, handleCardClick, handleLikeClick, handleDeleteIconClick);
         const cardElement = card.renderCard();
         defaultCardList.addItem(cardElement);
 
     }
 }, cardListSelector);
-defaultCardList.renderer();
-api.getUserProfile()
-    .then((result) => {
-        userInfo.setUserInfo(result);
-    }).catch((err) => {
-        console.log(err);
-    })
+Promise.all([
+    api.getUserProfile(),
+    api.getInitialCards()
+]).then(([result,cards]) => {
+    userInfo.setUserInfo(result);
+    myCodeUser = result._id;
+    defaultCardList.renderer(cards);
+}).catch((err) => {
+    console.log(err);
+})
+
+
 function handleLikeClick(card, elementLike, elementNumberLikes) {
     if (elementLike.classList.contains('element__like-active')) {
         api.deleteLikeClick(card)
